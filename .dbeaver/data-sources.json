@@ -1,0 +1,20 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql5-16cd76ec92d-329d88703e8504ac": {
+			"provider": "mysql",
+			"driver": "mysql5",
+			"name": "MySQL - mysql",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "mysql",
+				"url": "jdbc:mysql://localhost:3306/mysql",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev"
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql5-16cd76ec92d-329d88703e8504ac": {
+			"provider": "mysql",
+			"driver": "mysql5",
+			"name": "MySQL - mysql",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "mysql",
+				"url": "jdbc:mysql://localhost:3306/mysql",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev"
+			}
+		},
+		"mysql5-16cd7734bfc-29c35446e2c2fc4": {
+			"provider": "mysql",
+			"driver": "mysql5",
+			"name": "MySQL - ncs_product",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "ncs_product",
+				"url": "jdbc:mysql://localhost:3306/ncs_product",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev"
+			}
+		},
+		"mysql5-16cdc42d20b-735cd4cf46492042": {
+			"provider": "mysql",
+			"driver": "mysql5",
+			"name": "MySQL - mysql 2",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "mysql",
+				"url": "jdbc:mysql://localhost:3306/mysql",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev",
+				"handlers": {}
+			}
+		}
+	}
+}
