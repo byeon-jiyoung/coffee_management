@@ -526,3 +526,457 @@
 [2019-08-29] <==      Total: 0
 [2019-08-29] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
 [2019-08-29] ==> Parameters: dfsafdfasdf(String), 24312(Integer), 323(Integer), 23(Integer)
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: A001, 아메리카노, 11, 100000, 1000, 10, 100000000, 9090910, 90909091, 9090909, 1
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 9, 5100, 150, 10, 765000, 69546, 695455, 69545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 8, 5000, 150, 10, 750000, 68182, 681819, 68182, 4
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 5
+[2019-08-30] <==        Row: B004, 아이스초코, 7, 6000, 100, 10, 600000, 54546, 545455, 54545, 6
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 7
+[2019-08-30] <==        Row: B003, 팥빙수, 6, 3000, 175, 12, 525000, 47728, 477273, 57273, 8
+[2019-08-30] <==        Row: B003, 팥빙수, 5, 3000, 175, 12, 525000, 47728, 477273, 57273, 8
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 9
+[2019-08-30] <==      Total: 10
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: false(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: A001, 아메리카노, 11, 100000, 1000, 10, 100000000, 9090910, 90909091, 9090909, 1
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 9, 5100, 150, 10, 765000, 69546, 695455, 69545, 4
+[2019-08-30] <==        Row: A001, 아메리카노, 8, 5000, 150, 10, 750000, 68182, 681819, 68182, 5
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 6
+[2019-08-30] <==        Row: B003, 팥빙수, 6, 3000, 175, 12, 525000, 47728, 477273, 57273, 7
+[2019-08-30] <==        Row: B003, 팥빙수, 5, 3000, 175, 12, 525000, 47728, 477273, 57273, 7
+[2019-08-30] <==        Row: B004, 아이스초코, 7, 6000, 100, 10, 600000, 54546, 545455, 54545, 8
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 9
+[2019-08-30] <==      Total: 10
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: B005(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: B004(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: B004, 아이스초코
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: B004(String), 500000000(Integer), 100(Integer), 10(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B004, 아이스초코, 12, 500000000, 100, 10, 50000000000, 4545454546, 45454545455, 4545454545, 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: A001, 아메리카노, 11, 100000, 1000, 10, 100000000, 9090910, 90909091, 9090909, 1
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 9, 5100, 150, 10, 765000, 69546, 695455, 69545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 8, 5000, 150, 10, 750000, 68182, 681819, 68182, 4
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 5
+[2019-08-30] <==        Row: B004, 아이스초코, 7, 6000, 100, 10, 600000, 54546, 545455, 54545, 6
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 7
+[2019-08-30] <==        Row: B003, 팥빙수, 6, 3000, 175, 12, 525000, 47728, 477273, 57273, 8
+[2019-08-30] <==        Row: B003, 팥빙수, 5, 3000, 175, 12, 525000, 47728, 477273, 57273, 8
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 9
+[2019-08-30] <==      Total: 10
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: a001(String), 1000(Integer), 200(Integer), 20(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: aoo1(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a002(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A002, 카푸치노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: a002(String), 1000(Integer), 200(Integer), 20(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: A001, 아메리카노, 11, 100000, 1000, 10, 100000000, 9090910, 90909091, 9090909, 1
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 9, 5100, 150, 10, 765000, 69546, 695455, 69545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 8, 5000, 150, 10, 750000, 68182, 681819, 68182, 4
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 5
+[2019-08-30] <==        Row: B004, 아이스초코, 7, 6000, 100, 10, 600000, 54546, 545455, 54545, 6
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 7
+[2019-08-30] <==        Row: B003, 팥빙수, 6, 3000, 175, 12, 525000, 47728, 477273, 57273, 8
+[2019-08-30] <==        Row: B003, 팥빙수, 5, 3000, 175, 12, 525000, 47728, 477273, 57273, 8
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 9
+[2019-08-30] <==        Row: A002, 카푸치노, 14, 1000, 200, 20, 200000, 18182, 181819, 36364, 10
+[2019-08-30] <==        Row: A001, 아메리카노, 13, 1000, 200, 20, 200000, 18182, 181819, 36364, 10
+[2019-08-30] <==      Total: 12
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a002(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A002, 카푸치노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a003(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A003, 헤이즐넛
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a004(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A004, 에스프레소
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: 78y6(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: 78y6(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: A001, 아메리카노, 11, 100000, 1000, 10, 100000000, 9090910, 90909091, 9090909, 1
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 9, 5100, 150, 10, 765000, 69546, 695455, 69545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 8, 5000, 150, 10, 750000, 68182, 681819, 68182, 4
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 5
+[2019-08-30] <==        Row: B004, 아이스초코, 7, 6000, 100, 10, 600000, 54546, 545455, 54545, 6
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 7
+[2019-08-30] <==        Row: B003, 팥빙수, 6, 3000, 175, 12, 525000, 47728, 477273, 57273, 8
+[2019-08-30] <==        Row: B003, 팥빙수, 5, 3000, 175, 12, 525000, 47728, 477273, 57273, 8
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 9
+[2019-08-30] <==        Row: A002, 카푸치노, 14, 1000, 200, 20, 200000, 18182, 181819, 36364, 10
+[2019-08-30] <==        Row: A001, 아메리카노, 13, 1000, 200, 20, 200000, 18182, 181819, 36364, 10
+[2019-08-30] <==      Total: 12
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 4
+[2019-08-30] <==      Total: 4
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: false(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 3
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 4
+[2019-08-30] <==      Total: 4
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A003(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A003, 헤이즐넛
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: A003(String), 5000(Integer), 130(Integer), 20(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-30] <==        Row: A003, 헤이즐넛, 5, 5000, 130, 20, 650000, 59091, 590910, 118182, 3
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 4
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-30] <==      Total: 5
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: false(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A003, 헤이즐넛, 5, 5000, 130, 20, 650000, 59091, 590910, 118182, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 4
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-30] <==      Total: 5
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 4
+[2019-08-30] <==      Total: 4
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: B004(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: B004, 아이스초코
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: B004(String), 7000(Integer), 300(Integer), 25(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B004, 아이스초코, 5, 7000, 300, 25, 2100000, 190910, 1909091, 477273, 1
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 3
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 4
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-30] <==      Total: 5
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: false(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B004, 아이스초코, 5, 7000, 300, 25, 2100000, 190910, 1909091, 477273, 1
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 4
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-30] <==      Total: 5
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: aoo1(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: a001(String), 50000000(Integer), 120(Integer), 20(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: A001, 아메리카노, 6, 50000000, 120, 20, 6000000000, 545454546, 5454545455, 1090909091, 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: a001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: a001(String), 9000000(Integer), 100(Integer), 20(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: A001, 아메리카노, 6, 50000000, 120, 20, 6000000000, 545454546, 5454545455, 1090909091, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 7, 9000000, 100, 20, 900000000, 81818182, 818181819, 163636364, 2
+[2019-08-30] <==        Row: B004, 아이스초코, 5, 7000, 300, 25, 2100000, 190910, 1909091, 477273, 3
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 4
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 5
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 6
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 7
+[2019-08-30] <==      Total: 7
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: B003(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: B003, 팥빙수
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: B003(String), 90000000(Integer), 2000(Integer), 30(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B003, 팥빙수, 8, 90000000, 2000, 30, 180000000000, 16363636364, 163636363637, 49090909091, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 6, 50000000, 120, 20, 6000000000, 545454546, 5454545455, 1090909091, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 7, 9000000, 100, 20, 900000000, 81818182, 818181819, 163636364, 3
+[2019-08-30] <==        Row: B004, 아이스초코, 5, 7000, 300, 25, 2100000, 190910, 1909091, 477273, 4
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 5
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 6
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 7
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 8
+[2019-08-30] <==      Total: 8
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: false(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B003, 팥빙수, 8, 90000000, 2000, 30, 180000000000, 16363636364, 163636363637, 49090909091, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 6, 50000000, 120, 20, 6000000000, 545454546, 5454545455, 1090909091, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 7, 9000000, 100, 20, 900000000, 81818182, 818181819, 163636364, 3
+[2019-08-30] <==        Row: B004, 아이스초코, 5, 7000, 300, 25, 2100000, 190910, 1909091, 477273, 4
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 5
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 6
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 7
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 8
+[2019-08-30] <==      Total: 8
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: 1234(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: 1234(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A004(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A004, 에스프레소
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A005(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A006(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A007(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A008(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: 1234(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: 1234(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: 1234(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: 1231(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A003(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A003, 헤이즐넛
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: A003(String), 5000(Integer), 130(Integer), 20(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-30] <==        Row: A003, 헤이즐넛, 5, 5000, 130, 20, 650000, 59091, 590910, 118182, 3
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 4
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-30] <==      Total: 5
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: false(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A003, 헤이즐넛, 5, 5000, 130, 20, 650000, 59091, 590910, 118182, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 4
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-30] <==      Total: 5
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 4
+[2019-08-30] <==      Total: 4
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 4
+[2019-08-30] <==      Total: 4
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: false(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 2
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 3
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 4
+[2019-08-30] <==      Total: 4
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: A001(String), 5000(Integer), 100(Integer), 10(Integer)
+[2019-08-30] <==    Updates: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 5, 5000, 100, 10, 500000, 45455, 454546, 45455, 4
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-30] <==      Total: 5
+[2019-08-30] <==    Updates: 0
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: C001(String)
+[2019-08-30] <==      Total: 0
+[2019-08-30] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-30] ==> Parameters: C001(String), 5000(Integer), 100(Integer), 10(Integer)
+[2019-08-30] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-30] ==> Parameters: A001(String)
+[2019-08-30] <==    Columns: code, name
+[2019-08-30] <==        Row: A001, 아메리카노
+[2019-08-30] <==      Total: 1
+[2019-08-30] ==>  Preparing: {call price_rank(?)} 
+[2019-08-30] ==> Parameters: true(Boolean)
+[2019-08-30] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-30] <==        Row: B001, 딸기쉐이크, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-30] <==        Row: A001, 아메리카노, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-30] <==        Row: A002, 카푸치노, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-30] <==        Row: A001, 아메리카노, 5, 5000, 100, 10, 500000, 45455, 454546, 45455, 4
+[2019-08-30] <==        Row: B002, 후르츠와인, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-30] <==      Total: 5
+[2019-08-30] <==    Updates: 0
