@@ -1,23 +1,23 @@
 package coffee_management.dto;
 
 public class SaleDetail {
-	private int supplyTax;//공급가액
-	private int addTax;//부가세액
-	private int salePrice;//판매금액
-	private int marginPrice;//마진액
-	private int rank;//순위
+	private long supplyTax;//공급가액
+	private long addTax;//부가세액
+	private long salePrice;//판매금액
+	private long marginPrice;//마진액
+	private long rank;//순위
 	
 	public SaleDetail() {
 	}
 
-	public SaleDetail(int supplyTax, int addTax, int salePrice, int marginPrice) {
+	public SaleDetail(long supplyTax, long addTax, long salePrice, long marginPrice) {
 		this.supplyTax = supplyTax;
 		this.addTax = addTax;
 		this.salePrice = salePrice;
 		this.marginPrice = marginPrice;
 	}
 	
-	public SaleDetail(int supplyTax, int addTax, int salePrice, int marginPrice, int rank) {
+	public SaleDetail(long supplyTax, long addTax, long salePrice, long marginPrice, long rank) {
 		this.supplyTax = supplyTax;
 		this.addTax = addTax;
 		this.salePrice = salePrice;
@@ -25,43 +25,43 @@ public class SaleDetail {
 		this.rank = rank;
 	}
 
-	public int getSupplyTax() {
+	public long getSupplyTax() {
 		return supplyTax;
 	}
 
-	public void setSupplyTax(int supplyTax) {
+	public void setSupplyTax(long supplyTax) {
 		this.supplyTax = supplyTax;
 	}
 
-	public int getAddTax() {
+	public long getAddTax() {
 		return addTax;
 	}
 
-	public void setAddTax(int addTax) {
+	public void setAddTax(long addTax) {
 		this.addTax = addTax;
 	}
 
-	public int getSalePrice() {
+	public long getSalePrice() {
 		return salePrice;
 	}
 
-	public void setSalePrice(int salePrice) {
+	public void setSalePrice(long salePrice) {
 		this.salePrice = salePrice;
 	}
 
-	public int getMarginPrice() {
+	public long getMarginPrice() {
 		return marginPrice;
 	}
 
-	public void setMarginPrice(int marginPrice) {
+	public void setMarginPrice(long marginPrice) {
 		this.marginPrice = marginPrice;
 	}
 	
-	public int getRank() {
+	public long getRank() {
 		return rank;
 	}
 
-	public void setRank(int rank) {
+	public void setRank(long rank) {
 		this.rank = rank;
 	}
 

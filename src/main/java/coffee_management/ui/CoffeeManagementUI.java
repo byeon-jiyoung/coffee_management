@@ -150,6 +150,7 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 						System.out.println("검색한 제품명 : " + searchProduct);
 						tfName.setText(searchProduct.getName());
 						
+						
 					} catch (SQLException e) {
 						e.printStackTrace();
 						
@@ -181,7 +182,7 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 		
 		try {
 			//제품단가
-			if(tfPrice.getText().length() > 9) {
+			if(tfPrice.getText().length() > 8) {
 				JOptionPane.showMessageDialog(null, "8자리 이내의 정수를 입력해주세요.");
 				tfPrice.setText("");
 				
@@ -193,11 +194,12 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 					}
 					
 				} catch (NumberFormatException e) {
-					JOptionPane.showMessageDialog(null, "정수를 입력해주세요.");
+					JOptionPane.showMessageDialog(null, "제품단가를 입력해주세요.");
 					tfPrice.setText("");
 					return;
 				}
 			}else {
+//				JOptionPane.showMessageDialog(null, tfPrice.getText().length());
 				try {
 					int price = Integer.parseInt(tfPrice.getText());
 					if(price <= 0) {
@@ -206,14 +208,14 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 					}
 					
 				} catch (NumberFormatException e) {
-					JOptionPane.showMessageDialog(null, "정수를 입력해주세요.");
+					JOptionPane.showMessageDialog(null, "제품단가를 입력해주세요.");
 					tfPrice.setText("");
 					return;
 				}
 			}
 			
 			//판매수량
-			if(tfSaleCnt.getText().length() > 9) {
+			if(tfSaleCnt.getText().length() > 8) {
 				JOptionPane.showMessageDialog(null, "8자리 이내의 정수를 입력해주세요.");
 				tfSaleCnt.setText("");
 				
@@ -225,7 +227,7 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 					}
 					
 				} catch (NumberFormatException e) {
-					JOptionPane.showMessageDialog(null, "정수를 입력해주세요.");
+					JOptionPane.showMessageDialog(null, "판매수량을 입력해주세요.");
 					tfSaleCnt.setText("");
 					
 					return;
@@ -238,7 +240,7 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 						return;
 					}
 				} catch (NumberFormatException e) {
-					JOptionPane.showMessageDialog(null, "정수를 입력해주세요.");
+					JOptionPane.showMessageDialog(null, "판매수량을 입력해주세요.");
 					tfSaleCnt.setText("");
 					
 					return;
@@ -246,7 +248,7 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 			}
 			
 			//마진율
-			if(tfMarginRate.getText().length() > 3) {
+			if(tfMarginRate.getText().length() > 2) {
 				JOptionPane.showMessageDialog(null, "2자리 이내의 정수를 입력해주세요.");
 				tfMarginRate.setText("");
 				
@@ -258,7 +260,7 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 						return;
 					}
 				} catch (NumberFormatException e) {
-					JOptionPane.showMessageDialog(null, "정수를 입력해주세요.");
+					JOptionPane.showMessageDialog(null, "마진율을 입력해주세요.");
 					tfMarginRate.setText("");
 					
 					return;
@@ -272,7 +274,7 @@ public class CoffeeManagementUI extends JFrame implements ActionListener {
 						return;
 					}
 				} catch (NumberFormatException e) {
-					JOptionPane.showMessageDialog(null, "정수를 입력해주세요.");
+					JOptionPane.showMessageDialog(null, "마진율을 입력해주세요.");
 					tfMarginRate.setText("");
 				}
 			}
