@@ -989,3 +989,69 @@
 [2019-08-31] <==        Row: B002, í›„ë¥´ì¸ ì™€ì¸, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 4
 [2019-08-31] <==      Total: 4
 [2019-08-31] <==    Updates: 0
+[2019-08-31] testOpenSession()
+[2019-08-31] session org.apache.ibatis.session.defaults.DefaultSqlSession@22138c47
+[2019-08-31] test01SelectProductByAll()
+[2019-08-31] ==>  Preparing: select code, name from product 
+[2019-08-31] ==> Parameters: 
+[2019-08-31] <==    Columns: code, name
+[2019-08-31] <==        Row: A001, ¾Æ¸Ş¸®Ä«³ë
+[2019-08-31] <==        Row: A002, Ä«ÇªÄ¡³ë
+[2019-08-31] <==        Row: A003, ÇìÀÌÁñ³Ó
+[2019-08-31] <==        Row: A004, ¿¡½ºÇÁ·¹¼Ò
+[2019-08-31] <==        Row: B001, µş±â½¦ÀÌÅ©
+[2019-08-31] <==        Row: B002, ÈÄ¸£Ã÷¿ÍÀÎ
+[2019-08-31] <==        Row: B003, ÆÏºù¼ö
+[2019-08-31] <==        Row: B004, ¾ÆÀÌ½ºÃÊÄÚ
+[2019-08-31] <==      Total: 8
+[2019-08-31] test02SelectProductByCode()
+[2019-08-31] ==>  Preparing: select code, name from product where code = ? 
+[2019-08-31] ==> Parameters: A001(String)
+[2019-08-31] <==    Columns: code, name
+[2019-08-31] <==        Row: A001, ¾Æ¸Ş¸®Ä«³ë
+[2019-08-31] <==      Total: 1
+[2019-08-31] test01SelectSaleByAll()
+[2019-08-31] ==>  Preparing: select no, code, price, saleCnt, marginRate from sale 
+[2019-08-31] ==> Parameters: 
+[2019-08-31] <==    Columns: no, code, price, saleCnt, marginRate
+[2019-08-31] <==        Row: 1, A001, 4500, 150, 10
+[2019-08-31] <==        Row: 2, A002, 3800, 140, 15
+[2019-08-31] <==        Row: 3, B001, 5200, 250, 12
+[2019-08-31] <==        Row: 4, B002, 4300, 110, 11
+[2019-08-31] <==      Total: 4
+[2019-08-31] test02InsertSale()
+[2019-08-31] ==>  Preparing: insert into sale (code, price, saleCnt, marginRate) values (?, ?, ?, ?) 
+[2019-08-31] ==> Parameters: B003(String), 3000(Integer), 175(Integer), 12(Integer)
+[2019-08-31] <==    Updates: 1
+[2019-08-31] test01SelectSaleByAll()
+[2019-08-31] ==>  Preparing: select no, code, price, saleCnt, marginRate from sale 
+[2019-08-31] ==> Parameters: 
+[2019-08-31] <==    Columns: no, code, price, saleCnt, marginRate
+[2019-08-31] <==        Row: 1, A001, 4500, 150, 10
+[2019-08-31] <==        Row: 2, A002, 3800, 140, 15
+[2019-08-31] <==        Row: 3, B001, 5200, 250, 12
+[2019-08-31] <==        Row: 4, B002, 4300, 110, 11
+[2019-08-31] <==        Row: 5, B003, 3000, 175, 12
+[2019-08-31] <==      Total: 5
+[2019-08-31] test03SelectSaleRankTrue()
+[2019-08-31] ==>  Preparing: {call price_rank(?)} 
+[2019-08-31] ==> Parameters: true(Boolean)
+[2019-08-31] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-31] <==        Row: B001, µş±â½¦ÀÌÅ©, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-31] <==        Row: A001, ¾Æ¸Ş¸®Ä«³ë, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 2
+[2019-08-31] <==        Row: A002, Ä«ÇªÄ¡³ë, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 3
+[2019-08-31] <==        Row: B003, ÆÏºù¼ö, 5, 3000, 175, 12, 525000, 47728, 477273, 57273, 4
+[2019-08-31] <==        Row: B002, ÈÄ¸£Ã÷¿ÍÀÎ, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-31] <==      Total: 5
+[2019-08-31] <==    Updates: 0
+[2019-08-31] test04SelectSaleRankFalse()
+[2019-08-31] ==>  Preparing: {call price_rank(?)} 
+[2019-08-31] ==> Parameters: false(Boolean)
+[2019-08-31] <==    Columns: code, name, no, price, saleCnt, marginRate, salePrice, addTax, supplyTax, marginPrice, rank
+[2019-08-31] <==        Row: B001, µş±â½¦ÀÌÅ©, 3, 5200, 250, 12, 1300000, 118182, 1181819, 141818, 1
+[2019-08-31] <==        Row: A002, Ä«ÇªÄ¡³ë, 2, 3800, 140, 15, 532000, 48364, 483637, 72545, 2
+[2019-08-31] <==        Row: A001, ¾Æ¸Ş¸®Ä«³ë, 1, 4500, 150, 10, 675000, 61364, 613637, 61364, 3
+[2019-08-31] <==        Row: B003, ÆÏºù¼ö, 5, 3000, 175, 12, 525000, 47728, 477273, 57273, 4
+[2019-08-31] <==        Row: B002, ÈÄ¸£Ã÷¿ÍÀÎ, 4, 4300, 110, 11, 473000, 43000, 430000, 47300, 5
+[2019-08-31] <==      Total: 5
+[2019-08-31] <==    Updates: 0
