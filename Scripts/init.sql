@@ -1,4 +1,4 @@
-use ncs_exam;
+-- use ncs_exam;
 -- 내 스키마
 DROP SCHEMA IF EXISTS ncs_exam;
 
